@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260927b">
   <link rel="stylesheet" href="order.css">
 </head>
 <body>
@@ -823,7 +823,24 @@
 <footer><div class="footer-inner"><div><div class="footer-name">TANDOOR &mdash; An Authentic Indian Cuisine</div><div>991 N Anderson Rd, Rock Hill, SC 29732</div><a href="tel:+18036593434">+1 (803) 659-3434</a></div><div class="footer-links"><a href="index.html">Home</a><a href="catering.html">Catering</a><a href="menu.html">Menu</a><a href="index.html#visit">Hours</a><a class="linklike" href="menu.html">Order Online</a></div></div></footer>
 <div class="mobile-order"><a class="order-btn" href="menu.html">Start an Order <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 <script>
-(function(){var f=document.getElementById('cateringForm');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()}).then(function(r){if(r.ok){f.hidden=true;document.getElementById('cateringSuccess').hidden=false;document.getElementById('cateringSuccess').scrollIntoView({behavior:'smooth',block:'center'});}else{alert('Sorry, something went wrong. Please call (803) 659-3434.');}}).catch(function(){alert('Sorry, something went wrong. Please call (803) 659-3434.');});});})();
+(function(){
+var CATERING_EMAIL='';
+var f=document.getElementById('cateringForm');if(!f)return;
+f.addEventListener('submit',function(e){
+e.preventDefault();
+function val(n){var el=f.elements[n];return el?el.value.trim():'';}
+var d={name:val('name'),phone:val('phone'),email:val('email'),type:val('event-type'),date:val('date'),guests:val('guests'),details:val('details')};
+function done(title,msg){f.hidden=true;var s=document.getElementById('cateringSuccess');s.hidden=false;s.querySelector('h3').textContent=title;s.querySelector('p').textContent=msg;s.scrollIntoView({behavior:'smooth',block:'center'});}
+if(CATERING_EMAIL){
+var subject=encodeURIComponent('Catering request: '+(d.type||'Event')+' on '+(d.date||'TBD'));
+var body=encodeURIComponent('Name: '+d.name+'\nPhone: '+d.phone+'\nEmail: '+d.email+'\nEvent type: '+d.type+'\nEvent date: '+d.date+'\nGuest count: '+d.guests+'\n\nDetails:\n'+d.details);
+window.location.href='mailto:'+CATERING_EMAIL+'?subject='+subject+'&body='+body;
+done('Request ready to send','Thanks '+d.name+' \u2014 your email app should have opened with the request filled in. Just hit send, or call us at (803) 659-3434.');
+}else{
+done('Thanks '+d.name+'!','Please call or text (803) 659-3434 to confirm your '+(d.type||'event')+' details and we\u2019ll plan it together.');
+}
+});
+})();
 
 </script>
 <script src="https://checkout.clover.com/sdk.js"></script>
