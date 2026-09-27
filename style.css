@@ -46,6 +46,11 @@
 .order-btn:not([href^="tel:"]),.mobile-order,#t-cart-btn,.add-btn,.footer-links .linklike{display:none!important}
 
 /* Local SEO sections */
+.made{background:var(--dark);color:#fff;text-align:center}
+.made .section-kicker{color:#f1ba50}
+.made h2{font:700 clamp(2.4rem,5vw,4.2rem)/1 "Cormorant Garamond",serif;margin:12px 0 16px}
+.made .lead{color:#dfd4c9;margin:0 auto;max-width:700px}
+.menu-note{margin:6px 0 0;font-style:italic;color:var(--muted)}
 .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
 .area-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
 .area-card h3{font-size:1.25rem;margin:0 0 8px}
