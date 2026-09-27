@@ -291,7 +291,7 @@ function renderCartView() {
   headTitle.textContent = 'Your Order';
   var keys = Object.keys(cart);
   if (!keys.length) {
-    body.innerHTML = '<div class="t-empty"><h3>Your cart is empty</h3><p>Add something tasty from the menu below.</p></div>';
+    body.innerHTML = '<div class="t-empty"><h3>Your cart is empty</h3><p><a href="menu.html" style="color:inherit;text-decoration:underline">Browse the menu</a> to add something tasty.</p></div>';
     foot.innerHTML = '';
     return;
   }
@@ -324,8 +324,9 @@ function renderCartView() {
     '<div class="t-row"><span>Subtotal</span><span>' + money(sub) + '</span></div>' +
     '<div class="t-row"><span>Tax (9%)</span><span>' + money(tax) + '</span></div>' +
     '<div class="t-row grand"><span>Total</span><span>' + money(sub + tax) + '</span></div></div>' +
-    '<button class="t-btn" type="button" id="t-to-checkout">Checkout</button>';
-  foot.querySelector('#t-to-checkout').addEventListener('click', function () { showView('checkout'); });
+    '<button class="t-btn" type="button" id="t-to-checkout">Checkout</button>' +
+    '<div class="t-secure">You\u2019ll finish checkout securely on our Clover ordering page.</div>';
+  foot.querySelector('#t-to-checkout').addEventListener('click', function () { window.location.href = 'https://tandoorrockhill.cloveronline.com'; });
 }
 
 /* ---------- checkout view ---------- */

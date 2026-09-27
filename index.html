@@ -19,7 +19,7 @@
   <nav class="navlinks">
     <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="catering.html">Catering</a><a href="index.html#visit">Hours</a>
   </nav>
-  <button type="button" class="order-btn" data-open-cart>Order Online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  <a class="order-btn" href="menu.html">Order Online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </header>
 <main id="main">
 <section class="hero">
@@ -27,7 +27,7 @@
     <div class="eyebrow">Our famous lunch buffet</div>
     <h1>Lunch is served.</h1>
     <p>A generous spread of Indian favorites, warm from the kitchen in Rock Hill.</p>
-    <div class="hero-actions"><button type="button" class="order-btn" data-open-cart>Start an Order</button><a class="ghost-btn" href="menu.html">Explore the Menu</a></div>
+    <div class="hero-actions"><a class="order-btn" href="menu.html">Start an Order</a><a class="ghost-btn" href="menu.html">Explore the Menu</a></div>
     <p class="hero-note">Pickup available &mdash; order ahead and skip the wait.</p>
   </div>
 </section>
@@ -40,18 +40,18 @@
 <section class="craft">
   <div class="craft-grid">
     <div class="craft-image"><img src="images/tandoor.jpg" alt="Chicken tikka skewers roasting inside a traditional clay tandoor oven" width="4912" height="3264" loading="lazy"></div>
-    <div class="craft-copy"><div class="section-kicker">From the clay oven</div><h2>Fire, spice and a proper char.</h2><p>Yogurt-marinated meats and paneer meet the heat of the tandoor for deep flavor and crisp edges.</p><div class="price-row"><strong>Chicken Tikka</strong><span>$17.99</span></div><div class="price-row"><strong>Tandoori Chicken</strong><span>$17.99</span></div><div class="price-row"><strong>Makhmali Paneer Angara</strong><span>$17.99</span></div><button type="button" class="order-btn" style="align-self:flex-start;margin-top:22px" data-open-cart>Start an Order</button></div>
+    <div class="craft-copy"><div class="section-kicker">From the clay oven</div><h2>Fire, spice and a proper char.</h2><p>Yogurt-marinated meats and paneer meet the heat of the tandoor for deep flavor and crisp edges.</p><div class="price-row"><strong>Chicken Tikka</strong><span>$17.99</span></div><div class="price-row"><strong>Tandoori Chicken</strong><span>$17.99</span></div><div class="price-row"><strong>Makhmali Paneer Angara</strong><span>$17.99</span></div><a class="order-btn" style="align-self:flex-start;margin-top:22px" href="menu.html">Start an Order</a></div>
   </div>
 </section>
 <section class="section visit" id="visit">
   <div class="container visit-card">
-    <div class="visit-copy"><div class="section-kicker" style="color:#ffd47b">Plan your visit</div><h2>Come hungry.</h2><address>991 N Anderson Rd<br>Rock Hill, SC 29732</address><a class="call-link" style="color:#fff" href="tel:+18036593434">+1 (803) 659-3434</a><div class="hours"><div class="hours-row"><strong>Monday</strong><span>Closed</span></div><div class="hours-row"><strong>Tuesday–Sunday</strong><span>11:30 AM–2:30 PM</span></div><div class="hours-row"><span></span><span>4:30 PM–9:00 PM</span></div></div><button type="button" class="order-btn" data-open-cart>Start an Order</button></div>
+    <div class="visit-copy"><div class="section-kicker" style="color:#ffd47b">Plan your visit</div><h2>Come hungry.</h2><address>991 N Anderson Rd<br>Rock Hill, SC 29732</address><a class="call-link" style="color:#fff" href="tel:+18036593434">+1 (803) 659-3434</a><div class="hours"><div class="hours-row"><strong>Monday</strong><span>Closed</span></div><div class="hours-row"><strong>Tuesday–Sunday</strong><span>11:30 AM–2:30 PM</span></div><div class="hours-row"><span></span><span>4:30 PM–9:00 PM</span></div></div><a class="order-btn" href="menu.html">Start an Order</a></div>
     <div class="visit-image"><img src="images/naan.jpg" alt="Fresh garlic naan brushed with butter and herbs" width="500" height="500" loading="lazy"></div>
   </div>
 </section>
 </main>
-<footer><div class="footer-inner"><div><div class="footer-name">TANDOOR &mdash; An Authentic Indian Cuisine</div><div>991 N Anderson Rd, Rock Hill, SC 29732</div><a href="tel:+18036593434">+1 (803) 659-3434</a></div><div class="footer-links"><a href="index.html">Home</a><a href="catering.html">Catering</a><a href="menu.html">Menu</a><a href="index.html#visit">Hours</a><button type="button" class="linklike" data-open-cart>Order Online</button></div></div></footer>
-<div class="mobile-order"><button type="button" class="order-btn" data-open-cart>Start an Order <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+<footer><div class="footer-inner"><div><div class="footer-name">TANDOOR &mdash; An Authentic Indian Cuisine</div><div>991 N Anderson Rd, Rock Hill, SC 29732</div><a href="tel:+18036593434">+1 (803) 659-3434</a></div><div class="footer-links"><a href="index.html">Home</a><a href="catering.html">Catering</a><a href="menu.html">Menu</a><a href="index.html#visit">Hours</a><a class="linklike" href="menu.html">Order Online</a></div></div></footer>
+<div class="mobile-order"><a class="order-btn" href="menu.html">Start an Order <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 <script src="https://checkout.clover.com/sdk.js"></script>
 <script src="order.js?v=20260924j"></script>
 

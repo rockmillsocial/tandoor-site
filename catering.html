@@ -19,7 +19,7 @@
   <nav class="navlinks">
     <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="catering.html">Catering</a><a href="index.html#visit">Hours</a>
   </nav>
-  <button type="button" class="order-btn" data-open-cart>Order Online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  <a class="order-btn" href="menu.html">Order Online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </header>
 <main id="main">
 <section class="section" id="catering">
@@ -820,8 +820,8 @@
 </div>
 </section>
 </main>
-<footer><div class="footer-inner"><div><div class="footer-name">TANDOOR &mdash; An Authentic Indian Cuisine</div><div>991 N Anderson Rd, Rock Hill, SC 29732</div><a href="tel:+18036593434">+1 (803) 659-3434</a></div><div class="footer-links"><a href="index.html">Home</a><a href="catering.html">Catering</a><a href="menu.html">Menu</a><a href="index.html#visit">Hours</a><button type="button" class="linklike" data-open-cart>Order Online</button></div></div></footer>
-<div class="mobile-order"><button type="button" class="order-btn" data-open-cart>Start an Order <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+<footer><div class="footer-inner"><div><div class="footer-name">TANDOOR &mdash; An Authentic Indian Cuisine</div><div>991 N Anderson Rd, Rock Hill, SC 29732</div><a href="tel:+18036593434">+1 (803) 659-3434</a></div><div class="footer-links"><a href="index.html">Home</a><a href="catering.html">Catering</a><a href="menu.html">Menu</a><a href="index.html#visit">Hours</a><a class="linklike" href="menu.html">Order Online</a></div></div></footer>
+<div class="mobile-order"><a class="order-btn" href="menu.html">Start an Order <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 <script>
 (function(){var f=document.getElementById('cateringForm');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()}).then(function(r){if(r.ok){f.hidden=true;document.getElementById('cateringSuccess').hidden=false;document.getElementById('cateringSuccess').scrollIntoView({behavior:'smooth',block:'center'});}else{alert('Sorry, something went wrong. Please call (803) 659-3434.');}}).catch(function(){alert('Sorry, something went wrong. Please call (803) 659-3434.');});});})();
 
