@@ -43,4 +43,4 @@
 @media(max-width:640px){.form-grid{grid-template-columns:1fr}.inquiry{margin-top:18px}}
 
 /* ordering paused (2026-09-27) — delete this block to restore online ordering */
-.order-btn:not([href^="tel:"]),.mobile-order,#t-cart-btn,.add-btn{display:none!important}
+.order-btn:not([href^="tel:"]),.mobile-order,#t-cart-btn,.add-btn,.footer-links .linklike{display:none!important}
