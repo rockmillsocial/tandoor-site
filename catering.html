@@ -826,10 +826,13 @@
 (function(){
 var CATERING_EMAIL='';
 var f=document.getElementById('cateringForm');if(!f)return;
+var de=f.elements['date'];
+if(de&&de.type==='date'){var _t=new Date();de.min=_t.getFullYear()+'-'+String(_t.getMonth()+1).padStart(2,'0')+'-'+String(_t.getDate()).padStart(2,'0');}
 f.addEventListener('submit',function(e){
 e.preventDefault();
 function val(n){var el=f.elements[n];return el?el.value.trim():'';}
 var d={name:val('name'),phone:val('phone'),email:val('email'),type:val('event-type'),date:val('date'),guests:val('guests'),details:val('details')};
+if(d.date){var _today=new Date();_today.setHours(0,0,0,0);if(new Date(d.date+'T00:00:00')<_today){alert('Please choose a date in the future for your event.');return;}}
 function done(title,msg){f.hidden=true;var s=document.getElementById('cateringSuccess');s.hidden=false;s.querySelector('h3').textContent=title;s.querySelector('p').textContent=msg;s.scrollIntoView({behavior:'smooth',block:'center'});}
 if(CATERING_EMAIL){
 var subject=encodeURIComponent('Catering request: '+(d.type||'Event')+' on '+(d.date||'TBD'));
