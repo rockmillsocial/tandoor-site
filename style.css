@@ -53,7 +53,7 @@
 .menu-note{margin:6px 0 0;font-style:italic;color:var(--muted)}
 .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
 .area-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
-.area-card h3{font-size:1.25rem;margin:0 0 8px}
+.area-card h3{font-size:1.25rem;margin:0 0 8px;color:#201a16}
 .area-card p{color:var(--muted);margin:0;font-size:.98rem}
 .faq{max-width:820px;margin-top:26px}
 .faq details{border-top:1px solid var(--line);padding:16px 0}
